@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+asyncpg
+python-dotenv
+qdrant-client
+openai
+google-generativeai
+passlib[bcrypt]
+python-jose[cryptography]
