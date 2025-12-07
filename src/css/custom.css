@@ -1,0 +1,295 @@
+/**
+ * Any CSS you add here will be applied to all pages of your Docusaurus site.
+ */
+
+:root {
+  /* Primary Docusaurus colors - Dark Grey */
+  --ifm-color-primary: #4A4A4A;
+  --ifm-color-primary-dark: #404040;
+  --ifm-color-primary-darker: #383838;
+  --ifm-color-primary-darkest: #2E2E2E;
+  --ifm-color-primary-light: #545454;
+  --ifm-color-primary-lighter: #5C5C5C;
+  --ifm-color-primary-lightest: #666666;
+  
+  /* Secondary Accent Color - Medium Grey */
+  --ifm-color-secondary: #888888;
+  --ifm-color-secondary-dark: #7B7B7B;
+  --ifm-color-secondary-darker: #727272;
+  --ifm-color-secondary-darkest: #606060;
+  --ifm-color-secondary-light: #959595;
+  --ifm-color-secondary-lighter: #A0A0A0;
+  --ifm-color-secondary-lightest: #ADADAD;
+
+  /* Text color and Headings */
+  --ifm-font-color-base: #262730; 
+  --ifm-heading-color: var(--ifm-font-color-base); 
+
+  /* Link colors */
+  --ifm-link-color: var(--ifm-color-secondary);
+  --ifm-link-hover-color: var(--ifm-color-primary); /* Primary on hover for links */
+  --ifm-link-decoration: none; 
+  --ifm-link-hover-decoration: underline; 
+
+  /* Backgrounds */
+  --ifm-background-color: #F8F8F8; /* Light grey/silver main background */
+  --ifm-code-background: #F8F8F8; /* Light silver for code blocks */
+
+  /* Custom UI/UX Variables for clearer mapping */
+  --primary-accent: var(--ifm-color-primary);
+  --secondary-accent: var(--ifm-color-secondary);
+  --text-primary: var(--ifm-font-color-base);
+  --bg-main: var(--ifm-background-color);
+  --bg-header-sidebar: #F8F8F8; /* Light silver for header/sidebar */
+  --border-color: #E0E0E0;
+
+  /* Typography */
+  --ifm-font-family-base: 'Roboto', 'Arial', sans-serif;
+  --ifm-font-family-monospace: 'Fira Code', SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  --ifm-h1-font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  --ifm-h2-font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  --ifm-h3-font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode adjustments */
+html[data-theme='dark'] {
+  /* Primary Docusaurus colors - Lighter Grey for dark theme */
+  --ifm-color-primary: #ADADAD;
+  --ifm-color-primary-dark: #A0A0A0;
+  --ifm-color-primary-darker: #959595;
+  --ifm-color-primary-darkest: #888888;
+  --ifm-color-primary-light: #B8B8B8;
+  --ifm-color-primary-lighter: #C0C0C0;
+  --ifm-color-primary-lightest: #CCCCCC;
+
+  /* Secondary Accent Color - Darker Grey for secondary in dark theme */
+  --ifm-color-secondary: #606060;
+  --ifm-color-secondary-dark: #545454;
+  --ifm-color-secondary-darker: #4A4A4A;
+  --ifm-color-secondary-darkest: #404040;
+  --ifm-color-secondary-light: #6C6C6C;
+  --ifm-color-secondary-lighter: #7B7B7B;
+  --ifm-color-secondary-lightest: #888888;
+
+  /* Text color and Headings for dark mode */
+  --ifm-font-color-base: #E0E0E0; /* Light text for dark mode */
+  --ifm-heading-color: var(--ifm-font-color-base);
+
+  /* Link colors for dark mode */
+  --ifm-link-color: var(--ifm-color-secondary);
+  --ifm-link-hover-color: var(--ifm-color-primary);
+
+  /* Backgrounds for dark mode */
+  --ifm-background-color: #262730; /* Dark background for dark mode */
+  --ifm-code-background: #1A1B22; /* Even darker for code blocks */
+
+  --bg-main: var(--ifm-background-color);
+  --bg-header-sidebar: #1A1B22; /* Even darker for header/sidebar */
+  --border-color: #3C3F45;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* General Body and Heading Styles */
+body {
+  font-family: var(--ifm-font-family-base);
+  color: var(--ifm-font-color-base);
+  background-color: var(--bg-main); /* Ensure body background matches main bg */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-accent);
+  font-family: var(--ifm-h1-font-family); /* Apply Montserrat to all headings */
+}
+
+/* Style for links within content */
+a {
+  color: var(--ifm-link-color);
+  text-decoration: var(--ifm-link-decoration);
+}
+
+a:hover {
+  color: var(--ifm-link-hover-color);
+  text-decoration: var(--ifm-link-hover-decoration);
+}
+
+/* Layout - Main content area */
+.main-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--bg-main);
+  color: var(--text-primary); /* Use primary text color */
+}
+
+/* Docusaurus specific components styling */
+
+/* Code Blocks (pre and code tags within pre) */
+pre {
+  border-left: 4px solid var(--primary-accent);
+  padding-left: 1rem;
+  background-color: var(--ifm-code-background);
+  border-radius: var(--ifm-global-border-radius);
+  overflow-x: auto;
+}
+
+.theme-code-block {
+  background-color: var(--ifm-code-background);
+}
+
+/* Buttons */
+.button {
+  color: #FFFFFF; /* White text on buttons for contrast */
+  border: 2px solid var(--primary-accent);
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  background-color: var(--primary-accent);
+  border-radius: var(--ifm-button-border-radius);
+}
+
+.button:hover {
+  color: #FFFFFF;
+  border: 2px solid var(--secondary-accent);
+  background-color: var(--secondary-accent);
+  text-decoration: none;
+}
+
+/* Override Docusaurus focus styles for buttons */
+.button:focus,
+.button:active {
+  box-shadow: 0 0 0 0.2rem rgba(var(--ifm-color-secondary-rgb), 0.5); /* Assuming --ifm-color-secondary-rgb is available from Infima */
+  border-color: var(--secondary-accent);
+  outline: none;
+  background-color: var(--secondary-accent);
+}
+
+/* Docusaurus Navbar styles */
+.navbar {
+  background-color: var(--bg-header-sidebar);
+  box-shadow: var(--ifm-navbar-shadow);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar__brand {
+  color: var(--ifm-navbar-link-color); /* Docusaurus default */
+}
+
+.navbar__toggle {
+  color: var(--ifm-navbar-link-color); /* Docusaurus default */
+}
+
+/* Sidebar styles */
+.theme-doc-sidebar-container { /* This targets the actual sidebar container */
+  background-color: var(--bg-header-sidebar);
+  border-right: 1px solid var(--border-color);
+}
+
+.menu__link {
+  color: var(--ifm-menu-link-color); /* Docusaurus default */
+}
+
+.menu__link--active {
+  background-color: rgba(74, 74, 74, 0.1); /* Light tint of primary accent */
+  color: var(--primary-accent) !important;
+  font-weight: bold;
+  border-left: 4px solid var(--primary-accent);
+  padding-left: calc(var(--ifm-menu-link-padding-horizontal) - 4px);
+  border-radius: 0 var(--ifm-global-border-radius) var(--ifm-global-border-radius) 0;
+}
+
+.menu__link:hover {
+  color: var(--secondary-accent); /* Use secondary accent on hover */
+  background-color: rgba(136, 136, 136, 0.1); /* Light tint of secondary accent */
+}
+
+/* Specific styling for hiding spans within headings, as per provided snippet */
+h1 span, h2 span, h3 span {
+    display: none !important;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    overflow: hidden;
+}
+
+/* Footer styles */
+.footer {
+  background-color: var(--bg-header-sidebar); /* Use header/sidebar bg for footer */
+  color: var(--ifm-font-color-base);
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- Intro Page Specific Styles (Moved from intro.md) --- */
+.hero__title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--primary-accent); /* Using defined primary accent */
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.hero__subtitle {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--secondary-accent); /* Using defined secondary accent */
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+/* Ensure the Markdown H1 and H2 are hidden to use the custom hero titles */
+#hackathon-native-book, #physical-ai--humanoid-robotics {
+  display: none;
+}
+
+.book-overview, .key-features, .start-journey {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+.book-overview h2, .key-features h2, .start-journey h2 {
+  color: var(--primary-accent);
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.book-overview p, .key-features ul li, .start-journey p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+.key-features ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 20px; /* Indent list for better readability */
+}
+.key-features ul li::before {
+  content: "•";
+  color: var(--secondary-accent); /* Bullet points use secondary accent */
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.start-journey {
+  text-align: center;
+}
+.button-link {
+  display: inline-block;
+  background-color: var(--primary-accent);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: var(--ifm-button-border-radius);
+  transition: background-color 0.3s ease;
+}
+.button-link:hover {
+  background-color: var(--secondary-accent); /* Secondary accent on hover */
+  text-decoration: none;
+}

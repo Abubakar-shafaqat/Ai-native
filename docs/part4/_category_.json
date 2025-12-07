@@ -1,0 +1,9 @@
+{
+  "label": "Part 4: Advanced Simulation & Control",
+  "position": 4,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Explore Isaac Sim, Isaac ROS, Nav2, and Sim-to-Real techniques."
+  }
+}

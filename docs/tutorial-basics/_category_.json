@@ -1,0 +1,8 @@
+{
+  "label": "Tutorial - Basics",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Fundamental skills and concepts in Physical AI and Humanoid Robotics, including ROS 2 setup, Gazebo, and Isaac Sim basics."
+  }
+}

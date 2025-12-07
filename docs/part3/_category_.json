@@ -1,0 +1,9 @@
+{
+  "label": "Part 3: Simulation & Modeling",
+  "position": 3,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Deep dive into Gazebo, URDF/SDF, and physics/sensors for robotics simulation."
+  }
+}

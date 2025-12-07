@@ -1,0 +1,9 @@
+{
+  "label": "Part 2: ROS 2 Essentials",
+  "position": 2,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "description": "Learn about ROS 2 architecture, nodes, topics, services, and Python packages."
+  }
+}
